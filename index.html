@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brand Design Review</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">Design Review <span>· Oct 2026</span></div>
+    <nav class="nav" aria-label="Sections">
+      <a href="#brand-pages">Brand Pages<span class="count">6</span></a>
+      <a href="#banners">Home Page Banners<span class="count">2</span></a>
+      <a href="#email">Email Design<span class="count">1</span></a>
+      <a href="#signage">Digital Signage<span class="count">1</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="intro wrap">
+    <div class="eyebrow">Team presentation · Latest work</div>
+    <h1>Brand pages, banners, email and signage</h1>
+    <p>Two brand page refreshes shown before and after, four new brand pages for North America and EMEA, and the latest campaign creative. Click any design to open it full screen and scroll through it.</p>
+    <div class="legend">
+      <div><span class="tag refresh">Refresh</span> Old vs new</div>
+      <div><span class="tag emea">EMEA</span> New to EMEA</div>
+      <div><span class="tag na">North America</span> NA site</div>
+    </div>
+  </section>
+
+  <section class="section" id="brand-pages">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Brand Pages</h2>
+        <p>Refreshes keep the brand page framework and update the story. New pages launch brands on the NA and EMEA sites.</p>
+      </div>
+      <div class="subhead">Refreshes · before and after</div>
+      <div class="grid" id="refresh-grid"></div>
+      <div class="subhead">New brand pages</div>
+      <div class="grid wide" id="new-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="banners">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Home Page Banners</h2>
+        <p>Sponsored placement for Sony, in two creative directions.</p>
+      </div>
+      <div class="grid wide" id="banners-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="email">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Email Design</h2>
+        <p>Promotional email built for the LG Professional project pricing program.</p>
+      </div>
+      <div class="grid" id="email-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="signage">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Digital Signage</h2>
+        <p>Full-screen creative for branch displays.</p>
+      </div>
+      <div class="grid wide" id="signage-grid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">Tip: in the viewer use ← → to move between designs, A to auto-scroll, 1 / 2 / 3 for Before / After / Side by side, and Esc to close.</div>
+</footer>
+
+<div class="viewer" id="viewer" hidden role="dialog" aria-modal="true" aria-labelledby="viewer-name">
+  <div class="viewer-bar">
+    <div class="viewer-title">
+      <strong id="viewer-name"></strong>
+      <span id="viewer-region"></span>
+      <span class="pos" id="viewer-pos"></span>
+    </div>
+    <div class="seg" id="seg" role="group" aria-label="Compare">
+      <button data-view="old" aria-pressed="false">Before</button>
+      <button data-view="new" aria-pressed="true">After</button>
+      <button data-view="split" aria-pressed="false" class="hide-sm">Side by side</button>
+    </div>
+    <button class="vbtn" id="auto" aria-pressed="false" title="Auto-scroll (A)">▶ <span class="hide-sm">Auto-scroll</span></button>
+    <button class="vbtn hide-sm" id="top" title="Back to top">↑ Top</button>
+    <button class="vbtn" id="prev" aria-label="Previous design" title="Previous (←)">←</button>
+    <button class="vbtn" id="next" aria-label="Next design" title="Next (→)">→</button>
+    <button class="vbtn close" id="close" aria-label="Close viewer" title="Close (Esc)">×</button>
+  </div>
+  <div class="progress"><span id="progress"></span></div>
+  <div class="viewer-scroll" id="viewer-scroll">
+    <div class="stage" id="stage"></div>
+  </div>
+  <div class="viewer-note" id="viewer-note">Scroll to move through the design · click outside it or press Esc to close</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
